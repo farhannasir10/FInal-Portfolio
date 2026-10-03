@@ -1,4 +1,5 @@
 import { cn } from "@/lib/utils";
+import { techIconUrl } from "@/lib/tech-icons";
 
 /** Matches Mrityunjay inset chip / CTA style */
 export function InsetButton({
@@ -82,11 +83,24 @@ export function MoreToggle({
 }
 
 export function TechChip({ name }: { name: string }) {
+  const icon = techIconUrl(name);
+
   return (
-    <div className="flex items-center gap-1 rounded-md border border-dashed border-neutral-300 px-1.5 py-[4px] text-[12.5px] font-medium text-neutral-500 shadow-[inset_0_2px_6px_rgba(0,0,0,0.15)] transition-all duration-500 hover:scale-[1.02] hover:cursor-pointer md:py-[5px] md:text-sm dark:border-neutral-600 dark:bg-neutral-900 dark:text-neutral-300 dark:shadow-[inset_0_2px_6px_rgba(255,255,255,0.15)]">
-      <span className="flex size-[18px] items-center justify-center rounded bg-neutral-100 text-[9px] font-semibold uppercase text-neutral-500 dark:bg-neutral-800">
-        {name.replace(/[^a-zA-Z0-9]/g, "").slice(0, 2)}
-      </span>
+    <div className="flex items-center gap-1 rounded-md border border-dashed border-neutral-300 px-1.5 py-[4px] text-[12.5px] font-medium shadow-[inset_0_2px_6px_rgba(0,0,0,0.15)] transition-all duration-500 hover:scale-[1.02] hover:cursor-pointer md:py-[5px] md:text-sm dark:border-neutral-600 dark:bg-neutral-900 dark:shadow-[inset_0_2px_6px_rgba(255,255,255,0.15)]">
+      {icon ? (
+        // eslint-disable-next-line @next/next/no-img-element
+        <img
+          src={icon}
+          alt=""
+          width={18}
+          height={18}
+          className="size-[18px] shrink-0 rounded"
+        />
+      ) : (
+        <span className="flex size-[18px] items-center justify-center rounded bg-neutral-100 text-[9px] font-semibold uppercase text-neutral-500 dark:bg-neutral-800">
+          {name.replace(/[^a-zA-Z0-9]/g, "").slice(0, 2)}
+        </span>
+      )}
       {name}
     </div>
   );

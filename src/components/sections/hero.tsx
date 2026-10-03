@@ -14,8 +14,8 @@ function Highlight({ children }: { children: React.ReactNode }) {
 
 export function Hero() {
   return (
-    <section className="mx-auto max-w-2xl px-3.5 md:px-0">
-      <div className="my-10 mt-[66px] flex w-full flex-col justify-between gap-6 rounded-xl border border-neutral-100 p-5 shadow-none sm:max-w-xl md:max-w-2xl md:flex-row md:p-10 md:px-14 md:shadow-sm dark:border-neutral-900 dark:bg-neutral-900">
+    <section className="mx-auto w-full max-w-2xl px-4 md:px-0">
+      <div className="my-10 mt-[76px] flex w-full flex-col items-stretch justify-between gap-6 rounded-xl border border-neutral-200/80 p-5 shadow-none sm:max-w-xl md:max-w-2xl md:flex-row md:items-end md:p-10 md:px-14 md:shadow-[0_1px_2px_rgba(0,0,0,0.04)] dark:border-neutral-800 dark:bg-neutral-900">
         <div className="flex flex-1 flex-col justify-center">
           <div className="text-xl sm:text-2xl md:text-3xl">
             <div className="font-[family-name:var(--font-inter)]">Hi there,</div>
@@ -31,7 +31,7 @@ export function Hero() {
           </div>
 
           <div className="mt-2 md:mt-2">
-            <Link href="#about">
+            <Link href="/contact">
               <PillButton className="origin-left scale-90 sm:scale-95 md:scale-100">
                 Get in touch
                 <MousePointer2 className="ml-1 size-4" />
@@ -40,12 +40,12 @@ export function Hero() {
           </div>
         </div>
 
-        <div className="relative mx-auto aspect-square w-40 shrink-0 overflow-hidden rounded-xl sm:w-48 md:mx-0 md:w-56">
+        <div className="relative mx-auto aspect-square w-40 shrink-0 overflow-hidden rounded-xl bg-white sm:w-48 md:mx-0 md:w-56 dark:bg-neutral-900">
           <Image
-            src="/projects/covers/avatar.jpeg"
+            src="/projects/covers/avatar-v2.jpg"
             alt={site.name}
             fill
-            className="object-cover grayscale"
+            className="object-cover object-top grayscale mix-blend-multiply dark:mix-blend-normal"
             sizes="224px"
             priority
           />

@@ -1,21 +1,15 @@
-import Link from "next/link";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { Search } from "@/components/search";
-import { site } from "@/data/site";
+import { Logo } from "@/components/logo";
+import Link from "next/link";
 
 export function Header() {
   return (
     <header className="fixed inset-x-0 top-0 z-50 bg-background transition-colors duration-200">
       <div className="mx-auto flex max-w-2xl items-center justify-between gap-3 px-3.5 py-3 md:px-0 lg:py-4">
-        <div className="flex items-center gap-4 md:gap-12">
-          <Link
-            href="/"
-            aria-label="home"
-            className="font-display text-lg font-medium text-orange-300"
-          >
-            {site.firstName.charAt(0)}
-          </Link>
-          <ul className="flex gap-3 text-[12.5px] sm:gap-6 md:gap-8 md:text-sm">
+        <div className="flex items-center gap-3 md:gap-6">
+          <Logo />
+          <ul className="flex gap-3 text-[12.5px] sm:gap-5 md:gap-6 md:text-sm">
             <li>
               <Link
                 href="/#projects"

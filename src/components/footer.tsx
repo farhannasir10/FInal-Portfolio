@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { FileText } from "lucide-react";
+import { FileText, Mail } from "lucide-react";
 import { site } from "@/data/site";
 
 function GitHubIcon({ className }: { className?: string }) {
@@ -24,19 +24,18 @@ function LinkedInIcon({ className }: { className?: string }) {
 
 export function Footer() {
   return (
-    <footer className="mx-auto max-w-2xl px-3.5 pb-16 pt-8 md:px-0">
-      <p className="text-sm text-neutral-500 dark:text-neutral-400">
-        Appreciate you visiting, wishing you a great day ahead.
-      </p>
-      <div className="mt-5 flex items-center gap-3">
+    <footer className="mx-auto max-w-2xl px-3.5 pb-16 pt-2 md:px-0">
+      <div className="rounded-full border border-neutral-200 px-5 py-3 text-center text-sm text-neutral-500 dark:border-neutral-800 dark:text-neutral-400">
+        ✨ Appreciate you visiting, wishing you a great day ahead. 🌻
+      </div>
+
+      <div className="mt-6 flex flex-wrap items-center justify-center gap-3 sm:justify-start">
         <Link
-          href={site.socials.github}
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="GitHub"
+          href={`mailto:${site.email}`}
+          aria-label="Email"
           className="rounded-full p-2 text-neutral-400 transition hover:text-neutral-700 dark:hover:text-neutral-200"
         >
-          <GitHubIcon className="size-4" />
+          <Mail className="size-4" />
         </Link>
         <Link
           href={site.socials.linkedin}
@@ -48,6 +47,16 @@ export function Footer() {
           <LinkedInIcon className="size-4" />
         </Link>
         <Link
+          href={site.socials.github}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="GitHub"
+          className="inline-flex items-center gap-1.5 rounded-full p-2 text-neutral-400 transition hover:text-neutral-700 dark:hover:text-neutral-200"
+        >
+          <GitHubIcon className="size-4" />
+          <span className="hidden text-xs sm:inline">farhannasir10</span>
+        </Link>
+        <Link
           href={site.cvPath}
           target="_blank"
           rel="noopener noreferrer"
@@ -57,8 +66,13 @@ export function Footer() {
           <FileText className="size-4" />
         </Link>
       </div>
-      <p className="mt-6 text-sm text-orange-300">{site.openToWork}</p>
-      <p className="mt-8 text-xs text-neutral-400">© 2026 {site.name}.</p>
+
+      <p className="mt-6 text-center text-sm text-neutral-500 sm:text-left dark:text-neutral-400">
+        🕒 {site.openToWork} 🕘
+      </p>
+      <p className="mt-8 text-center text-xs text-neutral-400 sm:text-left">
+        © 2026 {site.name}.
+      </p>
     </footer>
   );
 }

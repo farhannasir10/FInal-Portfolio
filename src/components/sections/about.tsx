@@ -2,13 +2,12 @@ import Link from "next/link";
 import { Download } from "lucide-react";
 import { site } from "@/data/site";
 import { PillButton } from "@/components/ui/button";
+import { SectionHeading } from "@/components/ui/section-heading";
 
 export function About() {
   return (
     <section id="about" className="mx-auto max-w-2xl px-3.5 py-8 md:px-0">
-      <h2 className="font-display border-b-4 border-orange-100 text-2xl text-neutral-500 dark:border-orange-200 dark:text-neutral-200">
-        about me.
-      </h2>
+      <SectionHeading>about me.</SectionHeading>
       <p className="mt-2 text-sm text-neutral-400">{site.about.subtitle}</p>
 
       <div className="mt-5 rounded-xl border border-neutral-100 p-5 dark:border-neutral-800 dark:bg-neutral-900">

@@ -1,11 +1,12 @@
 import { education } from "@/data/education";
+import { SectionHeading } from "@/components/ui/section-heading";
 
 export function Education() {
   return (
     <section id="education" className="mx-auto max-w-2xl px-3.5 py-8 md:px-0">
-      <h2 className="font-display text-2xl text-neutral-500 dark:text-neutral-200">
+      <SectionHeading>
         <span className="text-neutral-400">my</span> education.
-      </h2>
+      </SectionHeading>
 
       <div className="mt-5 space-y-4">
         {education.map((item) => (

@@ -49,10 +49,10 @@ const navigationItems: NavItem[] = [
   {
     label: "Go to Contact",
     description: "Get in touch",
-    href: "/#about",
+    href: "/contact",
     shortcut: "Q",
     icon: Phone,
-    keywords: "contact about cv email",
+    keywords: "contact about cv email project discuss",
   },
 ];
 

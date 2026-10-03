@@ -24,7 +24,7 @@ export const projects: Project[] = [
     summary:
       "A complete full-stack Event Marketplace built from scratch as the sole developer. It connects event organizers, vendors, and attendees in one easy-to-use platform — covering event creation, vendor booking, ticketing, and travel integration.",
     stack: ["Next.js", "Tailwind CSS", "Nest.js", "Postgres"],
-    cover: "/projects/event-management-vendor-booking-system/cover.png",
+    cover: "/projects/event-management-vendor-booking-system/cover-evenzs.png",
     featured: true,
     images: [
       {

@@ -4,6 +4,7 @@ import { Globe, FileText, Sparkles } from "lucide-react";
 import { featuredProjects } from "@/data/projects";
 import { ColoredStackIcons } from "@/components/ui/stack-icons";
 import { InsetButton } from "@/components/ui/button";
+import { SectionHeading } from "@/components/ui/section-heading";
 
 function GitHubMini({ className }: { className?: string }) {
   return (
@@ -16,10 +17,8 @@ function GitHubMini({ className }: { className?: string }) {
 export function Projects() {
   return (
     <section id="projects" className="mx-auto max-w-2xl px-3.5 py-8 md:px-0">
-      <h2 className="font-display text-sm text-neutral-400">featured</h2>
-      <h2 className="font-display border-b-4 border-orange-100 text-2xl text-neutral-500 dark:border-orange-200 dark:text-neutral-200">
-        products.
-      </h2>
+      <p className="font-display text-sm text-neutral-400">featured</p>
+      <SectionHeading>products.</SectionHeading>
 
       <div className="mt-6 grid grid-cols-1 gap-5 sm:grid-cols-2">
         {featuredProjects.map((project) => (

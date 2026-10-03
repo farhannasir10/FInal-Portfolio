@@ -1,14 +1,13 @@
 import Link from "next/link";
 import { caseStudies } from "@/data/case-studies";
 import { InsetButton } from "@/components/ui/button";
+import { SectionHeading } from "@/components/ui/section-heading";
 
 export function CaseStudies() {
   return (
     <section id="case-studies" className="mx-auto max-w-2xl px-3.5 py-8 md:px-0">
-      <h2 className="font-display text-sm text-neutral-400">featured</h2>
-      <h2 className="font-display border-b-4 border-orange-100 text-2xl text-neutral-500 dark:border-orange-200 dark:text-neutral-200">
-        case studies.
-      </h2>
+      <p className="font-display text-sm text-neutral-400">featured</p>
+      <SectionHeading>case studies.</SectionHeading>
 
       <div className="mt-5 space-y-4">
         {caseStudies.map((study) => (

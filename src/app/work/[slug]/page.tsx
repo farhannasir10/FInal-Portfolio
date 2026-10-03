@@ -8,6 +8,7 @@ import {
   projects,
 } from "@/data/projects";
 import { ColoredStackIcons } from "@/components/ui/stack-icons";
+import { SectionHeading } from "@/components/ui/section-heading";
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -73,9 +74,7 @@ export default async function WorkPage({ params }: Props) {
 
       {galleryImages.length > 0 && (
         <section className="mt-10">
-          <h2 className="font-display border-b-4 border-orange-100 text-xl text-neutral-500 dark:border-orange-200 dark:text-neutral-200">
-            Screenshots
-          </h2>
+          <SectionHeading className="text-xl">Screenshots</SectionHeading>
           <div className="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2">
             {galleryImages.map((image) => (
               <figure key={image.src} className="overflow-hidden rounded-xl border border-neutral-100 bg-neutral-50 dark:border-neutral-800 dark:bg-neutral-900">
@@ -98,9 +97,7 @@ export default async function WorkPage({ params }: Props) {
 
       <section className="mt-12 space-y-8">
         <div>
-          <h2 className="font-display border-b-4 border-orange-100 text-xl text-neutral-500 dark:border-orange-200 dark:text-neutral-200">
-            Details
-          </h2>
+          <SectionHeading className="text-xl">Details</SectionHeading>
           <div className="mt-4 space-y-3 text-sm leading-7 text-neutral-500 dark:text-neutral-300">
             {project.overview.map((p) => (
               <p key={p}>{p}</p>

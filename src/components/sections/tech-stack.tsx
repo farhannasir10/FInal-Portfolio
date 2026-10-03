@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { coreTech, techCategories } from "@/data/tech";
 import { MoreToggle, TechChip } from "@/components/ui/button";
+import { SectionHeading } from "@/components/ui/section-heading";
 
 export function TechStack() {
   const [expanded, setExpanded] = useState(false);
@@ -13,9 +14,9 @@ export function TechStack() {
   return (
     <section id="tech" className="mx-auto max-w-2xl px-3.5 py-8 md:px-0">
       <div className="flex items-center justify-between gap-4">
-        <h2 className="font-display text-xl text-neutral-500 dark:text-neutral-200 md:text-2xl">
+        <SectionHeading className="text-xl md:text-2xl">
           my tech stack.
-        </h2>
+        </SectionHeading>
         <MoreToggle
           open={expanded}
           onClick={() => {
@@ -58,7 +59,7 @@ export function TechStack() {
                   />
                 </div>
                 {isOpen && (
-                  <div className="flex flex-wrap gap-2.5 px-3 pb-4 md:gap-3.5">
+                  <div className="flex flex-wrap gap-2.5 px-3 pb-4 text-neutral-500 md:gap-3.5 dark:text-neutral-300">
                     {category.items.map((item) => (
                       <TechChip
                         key={`${category.name}-${item.name}`}
