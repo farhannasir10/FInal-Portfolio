@@ -10,7 +10,7 @@ export function SectionHeading({
   return (
     <h2
       className={cn(
-        "font-display inline-block w-fit border-b-[3px] border-orange-200 pb-0.5 text-2xl text-neutral-500 dark:border-orange-300/70 dark:text-neutral-200",
+        "font-display inline-block w-fit border-b-[3px] border-orange-200 pb-0.5 text-2xl font-semibold text-neutral-700 dark:border-orange-300/70 dark:text-neutral-100",
         className,
       )}
     >

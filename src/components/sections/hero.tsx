@@ -42,7 +42,7 @@ export function Hero() {
 
         <div className="relative mx-auto aspect-square w-40 shrink-0 overflow-hidden rounded-xl bg-white sm:w-48 md:mx-0 md:w-56 dark:bg-neutral-900">
           <Image
-            src="/projects/covers/avatar-v2.jpg"
+            src="/projects/covers/avatar-hero.png"
             alt={site.name}
             fill
             className="object-cover object-top grayscale mix-blend-multiply dark:mix-blend-normal"

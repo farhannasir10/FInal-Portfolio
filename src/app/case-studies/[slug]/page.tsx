@@ -33,10 +33,10 @@ export default async function CaseStudyPage({ params }: Props) {
         ← All case studies
       </Link>
 
-      <p className="mt-6 text-xs uppercase tracking-wide text-neutral-400">
+      <p className="mt-6 text-xs font-medium uppercase tracking-wide text-neutral-400">
         {study.source}
       </p>
-      <h1 className="mt-2 font-display text-3xl text-neutral-800 dark:text-neutral-100">
+      <h1 className="mt-2 font-display text-3xl font-semibold text-neutral-800 dark:text-neutral-100">
         {study.title}
       </h1>
       <p className="mt-3 text-sm text-neutral-400">
@@ -47,7 +47,7 @@ export default async function CaseStudyPage({ params }: Props) {
       </p>
 
       <div className="mt-6">
-        <Link href={study.pdf} target="_blank" rel="noopener noreferrer">
+        <Link href={study.pdf} target="_blank" rel="noopener noreferrer" download>
           <PillButton className="gap-2">
             <Download className="size-4" />
             Download PDF
@@ -55,12 +55,35 @@ export default async function CaseStudyPage({ params }: Props) {
         </Link>
       </div>
 
-      <div className="mt-8 overflow-hidden rounded-xl border border-neutral-100 bg-neutral-50 dark:border-neutral-800 dark:bg-neutral-900">
-        <iframe
-          title={study.title}
-          src={`${study.pdf}#view=FitH`}
-          className="h-[75vh] w-full bg-white"
-        />
+      <dl className="mt-8 grid grid-cols-1 gap-4 rounded-xl border border-neutral-100 p-5 sm:grid-cols-2 dark:border-neutral-800">
+        {study.meta.map((item) => (
+          <div key={item.label}>
+            <dt className="text-[11px] font-semibold uppercase tracking-wide text-neutral-400">
+              {item.label}
+            </dt>
+            <dd className="mt-1 text-sm font-medium text-neutral-700 dark:text-neutral-200">
+              {item.value}
+            </dd>
+          </div>
+        ))}
+      </dl>
+
+      <div className="mt-12 space-y-10">
+        {study.sections.map((section) => (
+          <section
+            key={section.heading}
+            className="border-t border-neutral-100 pt-8 dark:border-neutral-800"
+          >
+            <h2 className="font-display text-xl font-semibold text-neutral-800 dark:text-neutral-100">
+              {section.heading}
+            </h2>
+            <div className="mt-4 space-y-3 text-sm leading-7 text-neutral-500 dark:text-neutral-300">
+              {section.body.map((paragraph) => (
+                <p key={paragraph}>{paragraph}</p>
+              ))}
+            </div>
+          </section>
+        ))}
       </div>
     </article>
   );
