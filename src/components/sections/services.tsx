@@ -5,7 +5,7 @@ export function Services() {
   return (
     <section id="services" className="mx-auto max-w-2xl px-3.5 py-8 md:px-0">
       <p className="font-display text-sm text-neutral-400">what i do</p>
-      <SectionHeading>services.</SectionHeading>
+      <SectionHeading>Services.</SectionHeading>
 
       <div className="mt-5 divide-y divide-neutral-100 dark:divide-neutral-800">
         {services.map((service) => (

@@ -14,7 +14,7 @@ export function Experience() {
   return (
     <section id="experience" className="mx-auto max-w-2xl px-3.5 py-8 md:px-0">
       <p className="font-display text-sm text-neutral-400">featured</p>
-      <SectionHeading>experience.</SectionHeading>
+      <SectionHeading>Experience.</SectionHeading>
 
       <div className="mt-5 space-y-5">
         {experience.map((item) => {

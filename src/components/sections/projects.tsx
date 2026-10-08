@@ -18,7 +18,7 @@ export function Projects() {
   return (
     <section id="projects" className="mx-auto max-w-2xl px-3.5 py-8 md:px-0">
       <p className="font-display text-sm text-neutral-400">featured</p>
-      <SectionHeading>products.</SectionHeading>
+      <SectionHeading>Products.</SectionHeading>
 
       <div className="mt-6 grid grid-cols-1 gap-5 sm:grid-cols-2">
         {featuredProjects.map((project) => (

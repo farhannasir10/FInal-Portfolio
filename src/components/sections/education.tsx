@@ -4,9 +4,7 @@ import { SectionHeading } from "@/components/ui/section-heading";
 export function Education() {
   return (
     <section id="education" className="mx-auto max-w-2xl px-3.5 py-8 md:px-0">
-      <SectionHeading>
-        <span className="text-neutral-400">my</span> education.
-      </SectionHeading>
+      <SectionHeading>Education.</SectionHeading>
 
       <div className="mt-5 space-y-4">
         {education.map((item) => (

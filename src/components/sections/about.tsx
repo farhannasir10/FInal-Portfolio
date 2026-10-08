@@ -7,7 +7,7 @@ import { SectionHeading } from "@/components/ui/section-heading";
 export function About() {
   return (
     <section id="about" className="mx-auto max-w-2xl px-3.5 py-8 md:px-0">
-      <SectionHeading>about me.</SectionHeading>
+      <SectionHeading>About.</SectionHeading>
       <p className="mt-2 text-sm text-neutral-400">{site.about.subtitle}</p>
 
       <div className="mt-5 rounded-xl border border-neutral-100 p-5 dark:border-neutral-800 dark:bg-neutral-900">

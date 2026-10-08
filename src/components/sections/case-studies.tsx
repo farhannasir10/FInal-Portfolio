@@ -7,7 +7,7 @@ export function CaseStudies() {
   return (
     <section id="case-studies" className="mx-auto max-w-2xl px-3.5 py-8 md:px-0">
       <p className="font-display text-sm text-neutral-400">featured</p>
-      <SectionHeading>case studies.</SectionHeading>
+      <SectionHeading>Case Studies.</SectionHeading>
 
       <div className="mt-5 space-y-4">
         {caseStudies.map((study) => (

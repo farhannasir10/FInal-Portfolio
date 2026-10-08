@@ -15,7 +15,7 @@ export function TechStack() {
     <section id="tech" className="mx-auto max-w-2xl px-3.5 py-8 md:px-0">
       <div className="flex items-center justify-between gap-4">
         <SectionHeading className="text-xl md:text-2xl">
-          my tech stack.
+          Tech Stack.
         </SectionHeading>
         <MoreToggle
           open={expanded}

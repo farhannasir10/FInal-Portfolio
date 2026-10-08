@@ -10,7 +10,7 @@ export default function CaseStudiesPage() {
   return (
     <div className="mx-auto max-w-2xl px-3.5 pb-10 pt-[66px] md:px-0">
       <h1 className="font-display text-3xl text-neutral-700 dark:text-neutral-100">
-        case studies.
+        Case Studies.
       </h1>
       <p className="mt-2 text-sm text-neutral-400">
         Case studies from products I&apos;ve designed and shipped.

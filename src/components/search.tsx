@@ -32,7 +32,7 @@ const navigationItems: NavItem[] = [
   },
   {
     label: "Go to Projects",
-    description: "View my projects",
+    description: "View projects",
     href: "/#projects",
     shortcut: "P",
     icon: FolderKanban,
@@ -40,7 +40,7 @@ const navigationItems: NavItem[] = [
   },
   {
     label: "Go to Case Studies",
-    description: "Read my case studies",
+    description: "Read case studies",
     href: "/case-studies",
     shortcut: "C",
     icon: PenLine,
